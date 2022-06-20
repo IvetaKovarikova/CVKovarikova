@@ -1,0 +1,160 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  background-color: inherit;
+  font-size: 1em;
+}
+
+body {
+  background: linear-gradient(90deg, #6f6864 29px, transparent 1%) center, linear-gradient(#6f6864 29px, transparent 1%) center, #ffe1cc;
+  background-size: 30px 30px;
+  color: #111;
+}
+
+.CV {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8a817c;
+}
+.CV__header {
+  color: #ffe1cc;
+}
+.CV__pic {
+  width: 200px;
+  height: 200px;
+  box-shadow: -10px -10px 0 0 #ffe1cc;
+  transition: opacity 200ms;
+}
+.CV__pic:hover {
+  opacity: 0.9;
+}
+.CV__contact, .CV__education, .CV__skills, .CV__languages, .CV__work, .CV__hobbies {
+  width: 100%;
+}
+.CV__section-item {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+}
+.CV__section-text {
+  width: 100%;
+  flex: 1 0 50%;
+}
+.CV__section-text:nth-child(1) {
+  font-weight: bold;
+}
+.CV__section-text:nth-child(2) {
+  text-align: right;
+}
+.CV__socials {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
+}
+.CV__socials-svg {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.2rem;
+  border-radius: 50%;
+  transition: background-color 200ms;
+}
+.CV__socials-svg:hover {
+  background-color: #ffe1cc;
+}
+.CV__socials-download {
+  transition: color 200ms;
+}
+.CV__socials-download:hover {
+  cursor: pointer;
+  color: #ffe1cc;
+}
+
+.nav {
+  display: none;
+}
+
+@media only screen and (min-width: 850px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .CV {
+    background: linear-gradient(to bottom left, #8a817c 50%, #a29b97 50%);
+    flex-direction: row;
+    position: relative;
+    padding: 25px;
+    height: 500px;
+    width: 800px;
+  }
+  .CV__header {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+  }
+  .CV__pic {
+    grid-area: pic;
+    justify-self: center;
+  }
+  .CV__contact, .CV__education, .CV__skills, .CV__languages, .CV__work, .CV__hobbies {
+    display: none;
+    grid-area: info;
+  }
+  .CV__socials {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+  }
+
+  .nav {
+    display: initial;
+    height: 550px;
+  }
+  .nav ul {
+    background-color: #ffe1cc;
+    height: 100%;
+  }
+  .nav ul li {
+    height: 16.6666666667%;
+  }
+  .nav ul li button {
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    transition: background-color 200ms;
+  }
+  .nav ul li button:hover {
+    background-color: #ffd2b3;
+  }
+}
+.show-section {
+  display: initial;
+}
+
+.select-btn {
+  background-color: #ffd2b3;
+}
+
+/*# sourceMappingURL=style.css.map */
