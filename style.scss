@@ -125,6 +125,13 @@ body {
     }
   }
 
+  &__contact--highlight{
+    transition: color 200ms;
+    &:hover{
+      color: $primary;
+    }
+  }
+
   &__socials {
     display: flex;
     flex-direction: row;

@@ -94,6 +94,12 @@ body {
   grid-area: dog;
   display: none;
 }
+.CV__contact--highlight {
+  transition: color 200ms;
+}
+.CV__contact--highlight:hover {
+  color: #ffe1cc;
+}
 .CV__socials {
   display: flex;
   flex-direction: row;
