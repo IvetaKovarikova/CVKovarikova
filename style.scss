@@ -16,6 +16,10 @@ a {
   color: inherit;
 }
 
+p {
+  margin: 0;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -30,7 +34,8 @@ button {
   background-color: inherit;
   font-size: 1em;
 }
-address{
+
+address {
   font-style: normal;
 }
 
@@ -94,6 +99,32 @@ body {
     }
   }
 
+  &__hobbies {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+      "h ."
+      "p1 p1"
+      "p2 p2";
+
+    &-heading {
+      grid-area: h;
+    }
+
+    &-p1 {
+      grid-area: p1;
+    }
+
+    &-p2 {
+      grid-area: p2;
+    }
+
+    &-dog {
+      grid-area: dog;
+      display: none;
+    }
+  }
+
   &__socials {
     display: flex;
     flex-direction: row;
@@ -127,6 +158,26 @@ body {
   display: none;
 }
 
+@media only screen and (min-width: 500px) {
+  .CV {
+    &__hobbies {
+      grid-template-areas:
+       "h ."
+       "p1 dog"
+       "p2 dog";
+
+      &-dog {
+        display: initial;
+        justify-self: center;
+        align-self: center;
+
+        width: 210px;
+        height: 210px;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 850px) {
   body {
     display: flex;
@@ -156,6 +207,13 @@ body {
     &__contact, &__education, &__skills, &__languages, &__work, &__hobbies {
       display: none;
       margin: 0.5rem 1rem;
+    }
+
+    &__hobbies {
+      grid-template-areas:
+        "h dog"
+        "p1 dog"
+        "p2 dog";
     }
 
     &__socials {
@@ -188,11 +246,10 @@ body {
       }
     }
   }
-
 }
 
 .show-section {
-  display: initial;
+  display: grid;
 }
 
 .select-btn {
