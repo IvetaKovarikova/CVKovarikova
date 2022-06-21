@@ -24,10 +24,15 @@ button {
   font-size: 1em;
 }
 
+address {
+  font-style: normal;
+}
+
 body {
   background: linear-gradient(90deg, #6f6864 29px, transparent 1%) center, linear-gradient(#6f6864 29px, transparent 1%) center, #ffe1cc;
   background-size: 30px 30px;
   color: #111;
+  font-family: "Montserrat", sans-serif;
 }
 
 .CV {
@@ -35,13 +40,14 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #8a817c;
+  padding: 1rem 5vw;
 }
 .CV__header {
   color: #ffe1cc;
 }
 .CV__pic {
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
   box-shadow: -10px -10px 0 0 #ffe1cc;
   transition: opacity 200ms;
 }
@@ -54,7 +60,7 @@ body {
 .CV__section-item {
   display: flex;
   flex-direction: row;
-  padding: 0.5rem;
+  margin: 1rem 0;
 }
 .CV__section-text {
   width: 100%;
@@ -69,7 +75,7 @@ body {
 .CV__socials {
   display: flex;
   flex-direction: row;
-  gap: 0.5em;
+  gap: 0.5rem;
   align-items: center;
 }
 .CV__socials-svg {
@@ -111,8 +117,8 @@ body {
   }
   .CV__header {
     position: absolute;
-    right: 2em;
-    top: 2em;
+    right: calc(25px + 1rem);
+    top: 2rem;
   }
   .CV__pic {
     grid-area: pic;
@@ -120,32 +126,32 @@ body {
   }
   .CV__contact, .CV__education, .CV__skills, .CV__languages, .CV__work, .CV__hobbies {
     display: none;
-    grid-area: info;
+    margin: 0.5rem 1rem;
   }
   .CV__socials {
     position: absolute;
-    bottom: 1em;
-    right: 1em;
+    bottom: 1rem;
+    right: 1rem;
   }
 
   .nav {
     display: initial;
+  }
+  .nav__list {
+    background-color: #ffe1cc;
     height: 550px;
   }
-  .nav ul {
-    background-color: #ffe1cc;
-    height: 100%;
-  }
-  .nav ul li {
+  .nav__item {
     height: 16.6666666667%;
   }
-  .nav ul li button {
+  .nav__btn--contact, .nav__btn--education, .nav__btn--skills, .nav__btn--languages, .nav__btn--work, .nav__btn--hobbies {
     width: 100%;
     height: 100%;
     padding: 0 1rem;
+    font-weight: bold;
     transition: background-color 200ms;
   }
-  .nav ul li button:hover {
+  .nav__btn--contact:hover, .nav__btn--education:hover, .nav__btn--skills:hover, .nav__btn--languages:hover, .nav__btn--work:hover, .nav__btn--hobbies:hover {
     background-color: #ffd2b3;
   }
 }

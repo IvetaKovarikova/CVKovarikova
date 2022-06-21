@@ -8,6 +8,10 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="icon.ico"/>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
     <title>Iveta Kovaříková</title>
 </head>
 <body>
@@ -22,17 +26,25 @@
         <ul>
             <li class="CV__section-item">
                 <span class="CV__section-text">Email: </span>
-                <span class="CV__section-text">iveta.kovarikova@outlook.cz</span>
+                <address class="CV__section-text">
+                    <a href="mailto:iveta.kovarikova@outlook.cz">
+                        iveta.kovarikova@<wbr>outlook.cz
+                    </a>
+                </address>
             </li>
 
             <li class="CV__section-item">
                 <span class="CV__section-text"> Phone: </span>
-                <span class="CV__section-text"> +420 739 182 397</span>
+                <span class="CV__section-text">
+                    <a href="tel:+420739182397">
+                           +420 739 182 397
+                    </a>
+                </span>
             </li>
 
             <li class="CV__section-item">
                 <span class="CV__section-text"> Address: </span>
-                <span class="CV__section-text"> Olomoucký kraj, The Czech republic </span>
+                <address class="CV__section-text"> Olomoucký kraj, The Czech republic </address>
             </li>
 
         </ul>
@@ -50,10 +62,12 @@
         <h2>Education</h2>
         <ul>
             <li class="CV__section-item">
-                Python course Pyladies (autumn 2020 - spring 2021)
+                <span class="CV__section-text"> Pyladies (Python course)  </span>
+                <span class="CV__section-text"> autumn 2020 - spring 2021 </span>
             </li>
             <li class="CV__section-item">
-                University Palacky - Applied Computer Science (September 2019 - June 2022)
+                <span class="CV__section-text"> Palacký University Olomouc - Applied Computer Science </span>
+                <span class="CV__section-text"> September 2019 - June 2022 </span>
             </li>
         </ul>
     </section>
@@ -77,9 +91,16 @@
             </li>
 
             <li class="CV__section-item">
-                <span class="CV__section-text">Python, Java, C#, C++, SQL, GitHub, UI/UX, Photoshop, Server-side JavaScript (Node.JS) </span>
+                <span class="CV__section-text"> Python, Java, C#, C++, SQL, Server-side JS (Node.JS) </span>
                 <span class="CV__section-text"> Basic </span>
             </li>
+
+
+            <li class="CV__section-item">
+                <span class="CV__section-text"> GitHub, UI/UX, Photoshop </span>
+                <span class="CV__section-text"> Basic </span>
+            </li>
+
         </ul>
 
     </section>
@@ -127,23 +148,23 @@
 
 
 <nav class="nav">
-    <ul>
-        <li>
+    <ul class="nav__list">
+        <li class="nav__item">
             <button class="nav__btn--contact">Contact</button>
         </li>
-        <li>
+        <li class="nav__item">
             <button class="nav__btn--hobbies">Hobbies</button>
         </li>
-        <li>
+        <li class="nav__item">
             <button class="nav__btn--education">Education</button>
         </li>
-        <li>
+        <li class="nav__item">
             <button class="nav__btn--skills">Skills</button>
         </li>
-        <li>
+        <li class="nav__item">
             <button class="nav__btn--languages">Languages</button>
         </li>
-        <li>
+        <li class="nav__item">
             <button class="nav__btn--work">Work EXP</button>
         </li>
     </ul>
